@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/css2.css" />
+    </head>
+    <body>
+        
+        <div class="container">
+      <div class="card-header bg-black text-white"></div>
+      <div class="card-body">
+          <div class="container">
+          <form th:object="${salas}" 
+                th:action="@{/save}" 
+                method="POST"
+                >
+              <input type="hidden" th:field="*{ID_Sala}" />
+            <div class="form-group mb-3 row">
+              <label class="col-md-2 col-form-label" for="ID_Sala">Numero de Sala</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control form-control-sm col-md-6"
+                  th:field="*{ID_Sala}"
+                  placeholder="Numero de Sala"
+                  id="ID_Sala"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
+            <div class="form-group mb-3 row">
+              <label
+                class="form-control-sm col-md-2 col-form-label"
+                for="Pelicula"
+                >Pelicula</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  th:field="*{Nombre_Pelicula}"
+                  class="form-control form-control-sm col-md-6"
+                  placeholder="Pelicula"
+                  id="Nombre_Pelicula"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
+            
+            <div class="form-group mb-3 row">
+              <label
+                class="form-control-sm col-form-label col-md-2"
+                for="Costo"
+                >Costo</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  th:field="*{Costo_Entrada}"
+                  class="form-control form-control-sm col-md-6"
+                  placeholder="Costo"
+                  id="Costo_Entrada"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
+            
+            <div class="form-group mb-3 row">
+              <label
+                class="form-control-sm col-form-label col-md-2"
+                for="Fecha"
+                >Fecha</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  th:field="*{Fecha}"
+                  class="form-control form-control-sm col-md-6"
+                  placeholder="Fecha"
+                  id="Fecha"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
+              
+              <div class="form-group mb-3 row">
+              <label
+                class="form-control-sm col-form-label col-md-2"
+                for="Capacidad"
+                >Capacidad</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  th:field="*{Capacidad}"
+                  class="form-control form-control-sm col-md-6"
+                  placeholder="Capacidad"
+                  id="Capacidad"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
+                      
+            <button type="submit" class="btn btn-primary" value="Guardar">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+        
+    </body>
+</html>
